@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide content by default */
+        #content {
+            display: none;
+        }
+
+        /* Optional: Style for the body to prevent layout shifts */
+        body.loading #content,
+        body.loading #login-screen {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-screen">
+        <h2>Enter Password</h2>
+        <input type="password" id="password" placeholder="Password">
+        <button id="submit-button">Submit</button>
+        <p id="error-message"></p>
+    </div>
+
+    <div id="content" style="display:none;">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="RSVP.html">RSVP</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>RSVP</h1>
+            <img src="Images/3.jpg" alt="RSVP Photo">
+            <p>This page contains information about RSVP.</p>
+        </main>
+        <footer>
+            <p>Ellena and Adam 13/09/25 </p>
+        </footer>
+    </div>
+    <script>
+        const pageTitle = "RSVP"; // Set the title for this page
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
