@@ -18,7 +18,7 @@ function checkPassword() {
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
 
-    if (password === '123') { // Set your desired password here
+    if (password === 'Ryan' || password === 'Hiles') { // Set your desired password here
         localStorage.setItem('authorized', 'true');
         const expirationTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour expiration
         localStorage.setItem('expiration', expirationTime);
