@@ -8,23 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
         showLogin();
     }
 
-    document.getElementById('submit-button').addEventListener('click', checkPassword);
+    document.getElementById('submit-button').addEventListener('click', checkccode);
 
     // Remove the loading class once the check is complete
     document.body.classList.remove('loading');
 });
 
-function checkPassword() {
-    const password = document.getElementById('password').value;
+function checkccode() {
+    const ccode = document.getElementById('ccode').value;
     const errorMessage = document.getElementById('error-message');
 
-    if (password === 'Ryan' || password === 'Hiles') { // Set your desired password here
+    if (ccode === 'Ryan' || ccode === 'Hiles') { // Set your desired ccode here
         localStorage.setItem('authorized', 'true');
         const expirationTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour expiration
         localStorage.setItem('expiration', expirationTime);
         showContent(pageTitle);
     } else {
-        errorMessage.textContent = 'Incorrect password. Please try again.';
+        errorMessage.textContent = 'Incorrect ccode. Please try again.';
     }
 }
 
