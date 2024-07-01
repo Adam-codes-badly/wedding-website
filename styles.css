@@ -51,6 +51,9 @@ main {
     flex-direction: column;
 }
 
+
+
+
 footer {
     background: #333;
     color: #fff;
@@ -64,6 +67,7 @@ img {
     height: auto;
     width: auto;
 }
+
 
 #login-screen {
     text-align: center;
