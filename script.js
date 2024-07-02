@@ -39,3 +39,21 @@ function showLogin() {
     document.getElementById('content').style.display = 'none';
     document.title = "Login"; // Update the title to reflect the content
 }
+function adjustIframeHeight() {
+    var iframe = document.getElementById('google-form-iframe');
+    var container = iframe.parentElement;
+    var width = container.offsetWidth;
+    if (width > 570) {
+        var estimatedHeight = 1400;
+    }
+    else if (width > 520 && width <= 570) {
+        var estimatedHeight = 1500;
+    }
+    else {
+        var estimatedHeight = 1600
+    }
+    iframe.style.height = estimatedHeight + 'px';
+}
+
+window.addEventListener('load', adjustIframeHeight);
+window.addEventListener('resize', adjustIframeHeight);

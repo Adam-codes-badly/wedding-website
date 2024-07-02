@@ -23,6 +23,7 @@
 <body>
     <div id="login-screen">
         <h2>Enter Password</h2>
+        <p>You can use either of our surnames.</p>
         <input type="ccode" id="ccode" placeholder="Password">
         <button id="submit-button">Submit</button>
         <p id="error-message"></p>
@@ -41,12 +42,14 @@
         <main>
             <h1>RSVP</h1>
             <p>Please fill out the form below to RSVP for your party.</p>
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSd6Gt3xJ3ZKQyBzB5haxYCiCJKw7Dg_qv0s0TKmb3AAiecTOg/viewform?embedded=true"
-                width="80%" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div class="responsive-container">
+                <iframe id="google-form-iframe"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSd6Gt3xJ3ZKQyBzB5haxYCiCJKw7Dg_qv0s0TKmb3AAiecTOg/viewform?embedded=true"
+                    frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </main>
         <footer>
-            <p>Ellena and Adam 13/09/25 </p>
+            <p>Ellena and Adam 13/09/25</p>
         </footer>
     </div>
     <script>

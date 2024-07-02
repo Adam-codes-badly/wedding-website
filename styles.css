@@ -1,3 +1,10 @@
+/* Global box-sizing for consistency */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
@@ -6,12 +13,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 }
 
 header {
@@ -25,6 +26,8 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -37,6 +40,10 @@ nav ul li a {
     display: block;
 }
 
+nav ul li a:hover {
+    color: #ddd;
+}
+
 main {
     background: #ffffff;
     color: #333;
@@ -45,14 +52,25 @@ main {
     flex: 1;
     align-items: center;
     justify-content: center;
-    /* Centers content vertically and horizontally */
-    height: 100%;
     text-align: center;
     flex-direction: column;
+    width: 100%;
 }
 
+.responsive-container {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    /* Height will be set dynamically with JS */
+    margin: 0 auto;
+    background: #f0f0f0;
+    /* Optional: background color while loading */
+}
 
-
+.responsive-container iframe {
+    width: 100%;
+    border: 0;
+}
 
 footer {
     background: #333;
@@ -67,7 +85,6 @@ img {
     height: auto;
     width: auto;
 }
-
 
 #login-screen {
     text-align: center;
