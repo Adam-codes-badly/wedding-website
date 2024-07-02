@@ -49,8 +49,11 @@ function adjustIframeHeight() {
     else if (width > 520 && width <= 570) {
         var estimatedHeight = 1500;
     }
+    else if (width > 470 && width <= 520) {
+        var estimatedHeight = 1600;
+    }
     else {
-        var estimatedHeight = 1600
+        var estimatedHeight = 1700
     }
     iframe.style.height = estimatedHeight + 'px';
 }
