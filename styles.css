@@ -1,4 +1,6 @@
 /* Global box-sizing for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Playwrite AU QLD", Geneva, Tahoma, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -15,9 +17,18 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    font-family: "Playwrite AU QLD", Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
 header {
-    background: #333;
-    color: #fff;
+    background: #1c5340;
+    color: #efe6cb;
     padding: 0.2rem;
 }
 
@@ -45,8 +56,9 @@ nav ul li a:hover {
 }
 
 main {
-    background: #ffffff;
-    color: #333;
+
+    color: #1c5340;
+    background: #efe6cb;
     padding: 2rem;
     display: flex;
     flex: 1;
@@ -63,8 +75,6 @@ main {
     height: auto;
     /* Height will be set dynamically with JS */
     margin: 0 auto;
-    background: #f0f0f0;
-    /* Optional: background color while loading */
 }
 
 .responsive-container iframe {
@@ -73,8 +83,8 @@ main {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #1c5340;
+    color: #efe6cb;
     text-align: center;
     padding: 1rem 0;
 }

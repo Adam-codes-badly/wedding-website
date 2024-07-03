@@ -53,7 +53,7 @@ function adjustIframeHeight() {
         var estimatedHeight = 1600;
     }
     else {
-        var estimatedHeight = 1720
+        var estimatedHeight = 1720;
     }
     iframe.style.height = estimatedHeight + 'px';
 }
