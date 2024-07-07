@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function checkccode() {
-    const ccode = document.getElementById('ccode').value;
+    const ccode = document.getElementById('ccode').value.trim().toLowerCase();
     const errorMessage = document.getElementById('error-message');
 
-    if (ccode === 'Ryan' || ccode === 'Hiles') { // Set your desired ccode here
+    if (ccode == 'ryan' || ccode == 'hiles') { // Set your desired ccode here
         localStorage.setItem('authorized', 'true');
         const expirationTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour expiration
         localStorage.setItem('expiration', expirationTime);
         showContent(pageTitle);
     } else {
-        errorMessage.textContent = 'Incorrect ccode. Please try again.';
+        errorMessage.textContent = 'Incorrect password. Please try again.';
     }
 }
 
