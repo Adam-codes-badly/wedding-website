@@ -102,6 +102,7 @@ main {
     text-align: center;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .responsive-container {
@@ -145,4 +146,131 @@ img {
 #error-message {
     color: red;
     margin-top: 1rem;
+}
+
+/* Hide content by default */
+#content {
+    display: none;
+}
+
+body.loading #content,
+body.loading #login-screen {
+    display: none;
+}
+
+/* Gift Grid Styles */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Using auto-fill for better auto layout */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%; /* Ensure grid width does not overflow */
+    margin: 0 auto; /* Ensure grid is centered */
+}
+
+
+/* Each Gift Item */
+.gift-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Space between image and text */
+    padding: 10px;
+}
+/* Gift Grid Styles */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* responsive */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Each Gift Item */
+.gift-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Hover effect */
+.gift-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside Gift Item */
+.gift-item img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+/* Image hover scaling */
+.gift-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Gift Info section (text area) */
+.gift-info {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Gift title */
+.gift-info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Gift description */
+.gift-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Price styling */
+.gift-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem 0;
+}
+
+/* Buy Button */
+.buy-button {
+    background-color: var(--teal-color);
+    color: var(--gold-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.buy-button:hover {
+    background-color: #1a4a4f;
 }
