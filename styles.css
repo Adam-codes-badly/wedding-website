@@ -40,7 +40,7 @@ h3 {
 
 p {
     font-family: 'Ovo', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
+    margin: 0px;
     font-size: 20px;
 }
 
@@ -158,33 +158,7 @@ body.loading #login-screen {
     display: none;
 }
 
-/* Gift Grid Styles */
-.gift-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Using auto-fill for better auto layout */
-    gap: 20px;
-    padding: 20px;
-    max-width: 100%; /* Ensure grid width does not overflow */
-    margin: 0 auto; /* Ensure grid is centered */
-}
-
-
-/* Each Gift Item */
-.gift-item {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: flex-start; /* Space between image and text */
-    padding: 10px;
-}
-/* Gift Grid Styles */
+/* Gift Grid remains the same */
 .gift-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* responsive */
@@ -194,7 +168,7 @@ body.loading #login-screen {
     margin: 0 auto;
 }
 
-/* Each Gift Item */
+/* Gift Item with equal height */
 .gift-item {
     background: white;
     border-radius: 12px;
@@ -206,56 +180,62 @@ body.loading #login-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 10px;
+    height: 100%; /* Important for consistent height */
 }
 
-/* Hover effect */
+/* Hover */
 .gift-item:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Image inside Gift Item */
+/* Image */
 .gift-item img {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    object-fit: contain;
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
     margin: 0 auto;
 }
 
-/* Image hover scaling */
+/* Hover zoom */
 .gift-item:hover img {
     transform: scale(1.05);
 }
 
-/* Gift Info section (text area) */
+/* Info Container */
 .gift-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     padding: 1rem;
     text-align: center;
     width: 100%;
 }
 
-/* Gift title */
+/* Title */
 .gift-info h2 {
-    margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Gift description */
+/* Description */
 .gift-info p {
     font-size: 0.95rem;
     color: #555;
+    margin-bottom: 0.5rem;
 }
 
-/* Price styling */
+/* Price */
 .gift-price {
     font-size: 1.1rem;
     font-weight: bold;
     color: #333;
-    margin: 1rem 0;
+    margin-top: auto;
+    min-height: 30px;
 }
 
 /* Buy Button */
@@ -267,8 +247,11 @@ body.loading #login-screen {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: auto;
 }
 
 .buy-button:hover {
